@@ -20,7 +20,7 @@ const NavBar = ({ accounts, setAccounts }) => {
 
   useEffect(() => {
     connectAccount();
-  }, [connectAccount]);
+  }, []);
 
   const [mintAmount, setMintAmount] = useState(1);
   // async function handleMint() {
@@ -79,11 +79,21 @@ const NavBar = ({ accounts, setAccounts }) => {
     <div>
       {accounts.length && (
         <div className="connect">
-          <button onClick={() => setMintAmount(mintAmount - 1)}>-</button>
+          <button
+            classname="mint"
+            onClick={() => setMintAmount(mintAmount - 1)}
+          >
+            -
+          </button>
           <div classname="mint-number">
             <p>{mintAmount}</p>
           </div>
-          <button onClick={() => setMintAmount(mintAmount + 1)}>+</button>
+          <button
+            classname="mint"
+            onClick={() => setMintAmount(mintAmount + 1)}
+          >
+            +
+          </button>
           <button onClick={mintNftHandler}>Mint</button>
         </div>
       )}
