@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Movement2/static/css/main.cb85b929.css",
-    "main.js": "/Movement2/static/js/main.1769a00d.js",
-    "static/js/787.26f97dc3.chunk.js": "/Movement2/static/js/787.26f97dc3.chunk.js",
-    "static/media/logo.png": "/Movement2/static/media/logo.9310e541b92cba80440d.png",
-    "static/media/26.png": "/Movement2/static/media/26.3fc105904a2363755cac.png",
-    "static/media/28.png": "/Movement2/static/media/28.7413e2f0156d7d014d9a.png",
-    "static/media/27.png": "/Movement2/static/media/27.15db98c76ab4432e1ae7.png",
-    "static/media/catcafe.medium.ttf": "/Movement2/static/media/catcafe.medium.7c55a17f922a55c3299e.ttf",
-    "static/media/Raleway.woff2": "/Movement2/static/media/Raleway.ac7104187881c74f53ab.woff2",
-    "static/media/CoventryGardenNF.woff2": "/Movement2/static/media/CoventryGardenNF.4bc16dcafb61994da4f2.woff2",
-    "static/media/osaka-re.ttf": "/Movement2/static/media/osaka-re.23e25886d1d44ce0348d.ttf",
-    "static/media/opensea.svg": "/Movement2/static/media/opensea.e3bb150e9c9b74f1d5d47ddbae97d012.svg",
-    "index.html": "/Movement2/index.html",
-    "static/media/twitter.svg": "/Movement2/static/media/twitter.409339671c444d3b8ae201e3685f1f6c.svg",
-    "main.cb85b929.css.map": "/Movement2/static/css/main.cb85b929.css.map",
-    "main.1769a00d.js.map": "/Movement2/static/js/main.1769a00d.js.map",
-    "787.26f97dc3.chunk.js.map": "/Movement2/static/js/787.26f97dc3.chunk.js.map"
+    "main.css": "/static/css/main.8ebb08d0.css",
+    "main.js": "/static/js/main.bbd4b143.js",
+    "static/js/787.26f97dc3.chunk.js": "/static/js/787.26f97dc3.chunk.js",
+    "static/media/logo.png": "/static/media/logo.9310e541b92cba80440d.png",
+    "static/media/26.png": "/static/media/26.3fc105904a2363755cac.png",
+    "static/media/28.png": "/static/media/28.7413e2f0156d7d014d9a.png",
+    "static/media/27.png": "/static/media/27.15db98c76ab4432e1ae7.png",
+    "static/media/catcafe.medium.ttf": "/static/media/catcafe.medium.7c55a17f922a55c3299e.ttf",
+    "static/media/Raleway.woff2": "/static/media/Raleway.ac7104187881c74f53ab.woff2",
+    "static/media/CoventryGardenNF.woff2": "/static/media/CoventryGardenNF.4bc16dcafb61994da4f2.woff2",
+    "static/media/osaka-re.ttf": "/static/media/osaka-re.23e25886d1d44ce0348d.ttf",
+    "static/media/opensea.svg": "/static/media/opensea.e3bb150e9c9b74f1d5d47ddbae97d012.svg",
+    "index.html": "/index.html",
+    "static/media/twitter.svg": "/static/media/twitter.409339671c444d3b8ae201e3685f1f6c.svg",
+    "main.8ebb08d0.css.map": "/static/css/main.8ebb08d0.css.map",
+    "main.bbd4b143.js.map": "/static/js/main.bbd4b143.js.map",
+    "787.26f97dc3.chunk.js.map": "/static/js/787.26f97dc3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb85b929.css",
-    "static/js/main.1769a00d.js"
+    "static/css/main.8ebb08d0.css",
+    "static/js/main.bbd4b143.js"
   ]
 }
