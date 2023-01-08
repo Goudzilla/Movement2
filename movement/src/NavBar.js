@@ -23,27 +23,57 @@ const NavBar = ({ accounts, setAccounts }) => {
   }, [connectAccount]);
 
   const [mintAmount, setMintAmount] = useState(1);
-  async function handleMint() {
-    if (window.ethereum) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(
-        contractAddress,
-        contractAbi.abi,
-        signer
-      );
-      try {
-        const gasLimit = 160000; // set the gas limit manually
-        const response = await contract.mint(BigNumber.from(mintAmount), {
-          gasLimit: gasLimit,
+  // async function handleMint() {
+  //   if (window.ethereum) {
+  //     const provider = new ethers.providers.Web3Provider(window.ethereum);
+  //     const signer = provider.getSigner();
+  //     const contract = new ethers.Contract(
+  //       contractAddress,
+  //       contractAbi.abi,
+  //       signer
+  //     );
+  //     try {
+  //       const gasLimit = 160000; // set the gas limit manually
+  //       const response = await contract.mint(BigNumber.from(mintAmount), {
+  //         gasLimit: gasLimit,
+  //       });
+
+  //       console.log("response", response);
+  //     } catch (err) {
+  //       console.log("error", err);
+  //     }
+  //   }
+  // }
+  const mintNftHandler = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const nftContract = new ethers.Contract(
+          contractAddress,
+          contractAbi.abi,
+          signer
+        );
+
+        console.log("Initialize payment");
+        let nftTxn = await nftContract.mint(mintAmount, {
+          value: ethers.utils.parseEther(`${0.012 * mintAmount}`),
         });
 
-        console.log("response", response);
-      } catch (err) {
-        console.log("error", err);
+        console.log("Mining... please wait");
+        await nftTxn.wait();
+        console.log(
+          `Mined, see transaction: https://etherscan.io/tx${nftTxn.hash}`
+        );
+      } else {
+        console.log("Ethereum object does not exist");
       }
+    } catch (err) {
+      console.log(err);
     }
-  }
+  };
 
   return (
     <div>
@@ -54,7 +84,7 @@ const NavBar = ({ accounts, setAccounts }) => {
             <p>{mintAmount}</p>
           </div>
           <button onClick={() => setMintAmount(mintAmount + 1)}>+</button>
-          <button onClick={handleMint}>Mint</button>
+          <button onClick={mintNftHandler}>Mint</button>
         </div>
       )}
     </div>
