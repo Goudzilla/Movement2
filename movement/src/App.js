@@ -5,7 +5,6 @@ import pic3 from "./buttons/28.png";
 import opensea from "./buttons/opensea.svg";
 import twitter from "./buttons/twitter.svg";
 import NavBar from "./NavBar";
-import MainMint from "./MainMint";
 import { useState } from "react";
 
 import "./App.css";
@@ -22,11 +21,6 @@ function App() {
           </div>
           <div className="connect">
             <NavBar accounts={accounts} setAccounts={setAccounts} />
-            <MainMint
-              className="buttons"
-              accounts={accounts}
-              setAccounts={setAccounts}
-            />
           </div>
           <div>
             <div className="buttons">
