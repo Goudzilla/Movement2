@@ -112,8 +112,9 @@
 .connect {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   min-width: 12vw;
+  background: white;
 }
 .icons {
   background-color: black;
@@ -1073,6 +1074,10 @@
   }
 }
 .twitch {
+  display: flex;
+  justify-content: center;
+}
+.mint-number {
   display: flex;
   justify-content: center;
 }
