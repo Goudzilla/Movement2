@@ -23,27 +23,6 @@ const NavBar = ({ accounts, setAccounts }) => {
   }, [connectAccount]);
 
   const [mintAmount, setMintAmount] = useState(1);
-  // async function handleMint() {
-  //   if (window.ethereum) {
-  //     const provider = new ethers.providers.Web3Provider(window.ethereum);
-  //     const signer = provider.getSigner();
-  //     const contract = new ethers.Contract(
-  //       contractAddress,
-  //       contractAbi.abi,
-  //       signer
-  //     );
-  //     try {
-  //       const gasLimit = 160000; // set the gas limit manually
-  //       const response = await contract.mint(BigNumber.from(mintAmount), {
-  //         gasLimit: gasLimit,
-  //       });
-
-  //       console.log("response", response);
-  //     } catch (err) {
-  //       console.log("error", err);
-  //     }
-  //   }
-  // }
   const mintNftHandler = async () => {
     try {
       const { ethereum } = window;
