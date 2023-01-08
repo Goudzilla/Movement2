@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { ethers } from "ethers";
+import { ethers, BigNumber } from "ethers";
 
 import contractAbi from "./movement.json";
 
@@ -23,6 +23,27 @@ const NavBar = ({ accounts, setAccounts }) => {
   }, [connectAccount]);
 
   const [mintAmount, setMintAmount] = useState(1);
+  // async function handleMint() {
+  //   if (window.ethereum) {
+  //     const provider = new ethers.providers.Web3Provider(window.ethereum);
+  //     const signer = provider.getSigner();
+  //     const contract = new ethers.Contract(
+  //       contractAddress,
+  //       contractAbi.abi,
+  //       signer
+  //     );
+  //     try {
+  //       const gasLimit = 160000; // set the gas limit manually
+  //       const response = await contract.mint(BigNumber.from(mintAmount), {
+  //         gasLimit: gasLimit,
+  //       });
+
+  //       console.log("response", response);
+  //     } catch (err) {
+  //       console.log("error", err);
+  //     }
+  //   }
+  // }
   const mintNftHandler = async () => {
     try {
       const { ethereum } = window;
@@ -37,7 +58,7 @@ const NavBar = ({ accounts, setAccounts }) => {
         );
 
         console.log("Initialize payment");
-        let nftTxn = await nftContract.mint(mintAmount, {
+        let nftTxn = await nftContract.mint(BigNumber.from(mintAmount), {
           value: ethers.utils.parseEther(`${0.012 * mintAmount}`),
         });
 
