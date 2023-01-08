@@ -25,7 +25,7 @@ function App() {
           <div>
             <div className="buttons">
               <div>
-                <a href="https://twitter.com/AIIllustration">
+                <a href="https://twitter.com/ozmandium">
                   <img src={twitter} alt="logo" class="bi bi-twitter" />
                 </a>
               </div>
