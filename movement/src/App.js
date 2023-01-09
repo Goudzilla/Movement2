@@ -25,12 +25,20 @@ function App() {
           <div>
             <div className="buttons">
               <div>
-                <a href="https://twitter.com/ozmandium">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://twitter.com/ozmandium"
+                >
                   <img src={twitter} alt="logo" class="bi bi-twitter" />
                 </a>
               </div>
               <div>
-                <a href="https://opensea.io/collection/movement-by-ozmandium">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://opensea.io/collection/movement-by-ozmandium"
+                >
                   <img src={opensea} alt="logo" class="logo2" />
                 </a>
               </div>
@@ -43,7 +51,8 @@ function App() {
           <p className="App-title">Movement by Ozmandium</p>
           <p>
             All AI-assisted, using my irl work to explore directions and curated
-            into one collection- Movement
+            into one collection- Movement. 200 pieces available for sale at
+            0.012eth per NFT, max 2 per wallet.
           </p>
         </div>
         <div className="tree-block">
