@@ -35,7 +35,7 @@
 }
 .App-title {
   font-family: "CoventryGarden";
-  font-size: 3.5em;
+  font-size: 3em;
   font-style: bold;
   letter-spacing: 0.02em;
   text-shadow: 3px 3px 5px #333;
@@ -104,6 +104,38 @@
   display: flex;
   background-color: #000;
 }
+.description-text {
+  text-align: center;
+}
+.detail {
+  min-width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-height: 20vh;
+}
+.detail-text {
+  width: 68px;
+  height: 30px;
+  left: calc(50% - 68px / 2);
+  top: calc(50% - 30px / 2 + 15px);
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Gray-Light */
+
+  color: #76747c;
+}
 .toolbar {
   min-height: 10bh;
   display: flex;
@@ -111,10 +143,44 @@
 }
 .connect {
   display: flex;
+  width: 57px;
+  height: 16px;
+  background: black;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  order: 0;
+  flex-grow: 0;
   justify-content: center;
-  flex-direction: column;
-  min-width: 12vw;
-  background: white;
+  align-items: center;
+}
+.connect-div {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 33px;
+  gap: 8px;
+
+  width: 123px;
+  height: 48px;
+  left: 1247px;
+  top: 64px;
+
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+.buttons-box {
+  display: flex;
+  justify-content: center;
 }
 .icons {
   background-color: black;
@@ -129,11 +195,38 @@
   display: flex;
   justify-content: center;
 }
-.buttons {
+.mint-button-div {
   display: flex;
-  justify-content: flex-end;
   flex-direction: row;
-  min-width: 12vw;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+.buttons {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  min-width: 25vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inside-button {
+  width: 57px;
+  height: 16px;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background: black;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .mint {
   top: 10px;
@@ -474,8 +567,11 @@
   max-width: 100vw;
 }
 .section {
+  min-width: 15vw;
   display: flex;
-  align-items: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
 }
 @keyframes animate {
@@ -727,10 +823,6 @@
     z-index: 2;
     justify-content: center;
   }
-  .section {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
   .second-title {
     font-family: "Alegreya", serif;
     display: flex;
@@ -920,6 +1012,12 @@
     font-size: 1rem;
     padding: 0.5rem;
     color: white;
+  }
+  .tree {
+    max-width: 30vw;
+  }
+  .App-title {
+    text-align: center;
   }
 }
 @media (max-width: 599px) {
@@ -1113,4 +1211,19 @@
 
 .mint:active {
   box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+.mint-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.increment-decrement {
+  left: 633px;
+  top: 434px;
+  font-family: "Comfortaa";
+  font-style: normal;
+  color: #ffffff;
+  background: black;
+  border: none;
 }

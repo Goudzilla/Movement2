@@ -4,8 +4,10 @@ import pic2 from "./buttons/27.png";
 import pic3 from "./buttons/28.png";
 import opensea from "./buttons/opensea.svg";
 import twitter from "./buttons/twitter.svg";
-import NavBar from "./NavBar";
 import { useState } from "react";
+import ConnectButton from "./Connect";
+import MintOne from "./MintOne";
+import MintTwo from "./MintTwo";
 
 import "./App.css";
 
@@ -19,12 +21,9 @@ function App() {
           <div>
             <img src={logo} alt="logo" className="logo" />
           </div>
-          <div className="connect">
-            <NavBar accounts={accounts} setAccounts={setAccounts} />
-          </div>
           <div>
             <div className="buttons">
-              <div>
+              <div classname="buttons-box">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -33,7 +32,7 @@ function App() {
                   <img src={twitter} alt="logo" class="bi bi-twitter" />
                 </a>
               </div>
-              <div>
+              <div classname="buttons-box">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -42,24 +41,52 @@ function App() {
                   <img src={opensea} alt="logo" class="logo2" />
                 </a>
               </div>
+              <div className="connect-div">
+                <ConnectButton accounts={accounts} setAccounts={setAccounts}>
+                  Connect
+                </ConnectButton>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="fex">
-        <div className="App-header">
-          <p className="App-title">Movement by Ozmandium</p>
-          <p>
-            All AI-assisted, using my irl work to explore directions and curated
-            into one collection- Movement. 200 pieces available for sale at
-            0.012eth per NFT, max 2 per wallet.
-          </p>
+      <div className="App-header">
+        <p className="App-title">Movement by Ozmandium</p>
+        <p className="description-text">
+          All AI-assisted, using my irl work to explore directions and <br></br>
+          curated into one collection- Movement.
+        </p>
+        <div className="detail">
+          <div className="section">
+            <p>200</p>
+            <p className="detail-text">Pieces</p>
+          </div>
+          <div className="section">
+            <p>0.012 Ξ</p>
+            <p className="detail-text">Price</p>
+          </div>
+          <div className="section">
+            <p>2</p>
+            <p className="detail-text">/Wallet</p>
+          </div>
         </div>
-        <div className="tree-block">
-          <img className="tree" src={pic1} alt="logo" />
-          <img className="tree" src={pic2} alt="logo" />
-          <img className="tree" src={pic3} alt="logo" />
-        </div>
+      </div>
+      <div className="mint-button-div">
+        <MintOne
+          accounts={accounts}
+          setAccounts={setAccounts}
+          className="connect"
+        ></MintOne>
+        <MintTwo
+          accounts={accounts}
+          setAccounts={setAccounts}
+          className="connect"
+        ></MintTwo>
+      </div>
+      <div className="tree-block">
+        <img className="tree" src={pic1} alt="logo" />
+        <img className="tree" src={pic2} alt="logo" />
+        <img className="tree" src={pic3} alt="logo" />
       </div>
     </div>
   );
